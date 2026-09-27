@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>FitBuddy Dashboard</title>
+
+<link rel="stylesheet"
+      href="/static/css/style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>📊 FitBuddy Dashboard</h1>
+
+<p>
+Registered Users:
+{{ users | length }}
+</p>
+
+<table>
+
+<tr>
+
+<th>ID</th>
+<th>Name</th>
+<th>Age</th>
+<th>Goal</th>
+<th>Activity</th>
+
+</tr>
+
+{% for user in users %}
+
+<tr>
+
+<td>{{ user.id }}</td>
+
+<td>{{ user.name }}</td>
+
+<td>{{ user.age }}</td>
+
+<td>{{ user.goal }}</td>
+
+<td>{{ user.intensity }}</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+<br>
+
+<a href="/">
+← Home
+</a>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>FitBuddy Feedback</title>
+
+<link rel="stylesheet"
+      href="/static/css/style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>💬 Plan Feedback</h1>
+
+<form action="/feedback"
+      method="post">
+
+<label>Select User</label>
+
+<select name="user_id"
+        required>
+
+{% for user in users %}
+
+<option value="{{ user.id }}">
+{{ user.name }} - {{ user.goal }}
+</option>
+
+{% endfor %}
+
+</select>
+
+
+<label>Your Feedback</label>
+
+<textarea
+    name="feedback_text"
+    rows="6"
+    required
+    placeholder="Tell FitBuddy what you want changed...">
+</textarea>
+
+
+<button type="submit">
+🤖 Update My Plan
+</button>
+
+</form>
+
+<br>
+
+<a href="/">
+← Home
+</a>
+
+</div>
+
+</body>
+
+</html>

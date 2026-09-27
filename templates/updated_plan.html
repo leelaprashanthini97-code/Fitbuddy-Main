@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Updated Plan</title>
+
+<link rel="stylesheet"
+      href="/static/css/style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+{% if error %}
+
+<h1>⚠️ Error</h1>
+
+<div class="error">
+{{ error }}
+</div>
+
+{% else %}
+
+<h1>🔄 Updated Workout Plan</h1>
+
+{% if user %}
+
+<p>
+Updated plan for {{ user.name }}
+</p>
+
+{% endif %}
+
+<div class="plan">
+
+{{ updated_plan | replace('\n', '<br>') | safe }}
+
+</div>
+
+{% endif %}
+
+<br>
+
+<a href="/feedback">
+Give More Feedback
+</a>
+
+<br><br>
+
+<a href="/">
+Home
+</a>
+
+</div>
+
+</body>
+
+</html>

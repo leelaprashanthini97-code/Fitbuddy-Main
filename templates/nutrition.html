@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>FitBuddy Nutrition</title>
+
+<link rel="stylesheet"
+      href="/static/css/style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🍎 Nutrition Generator</h1>
+
+<form action="/generate-nutrition"
+      method="post">
+
+<label>Name</label>
+
+<input type="text"
+       name="name"
+       required>
+
+
+<label>Age</label>
+
+<input type="number"
+       name="age"
+       required>
+
+
+<label>Goal</label>
+
+<select name="goal">
+
+<option value="general wellness">
+General Wellness
+</option>
+
+<option value="healthy lifestyle">
+Healthy Lifestyle
+</option>
+
+</select>
+
+
+<label>Food Preferences</label>
+
+<textarea
+    name="preferences"
+    placeholder="Example: vegetarian, South Indian foods">
+</textarea>
+
+
+<button type="submit">
+Generate Nutrition Ideas
+</button>
+
+</form>
+
+<a href="/">
+← Home
+</a>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Wellness Tips</title>
+
+<link rel="stylesheet"
+      href="/static/css/style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🌿 Wellness Tips</h1>
+
+<form action="/generate-tip"
+      method="post">
+
+<select name="tip_type">
+
+<option value="hydration">
+Hydration
+</option>
+
+<option value="sleep">
+Sleep
+</option>
+
+<option value="recovery">
+Recovery
+</option>
+
+<option value="healthy daily habits">
+Healthy Daily Habits
+</option>
+
+</select>
+
+<button type="submit">
+Generate Tip
+</button>
+
+</form>
+
+
+{% if error %}
+
+<div class="error">
+{{ error }}
+</div>
+
+{% endif %}
+
+
+{% if tip %}
+
+<div class="plan">
+
+{{ tip | replace('\n', '<br>') | safe }}
+
+</div>
+
+{% endif %}
+
+
+<br>
+
+<a href="/">
+← Home
+</a>
+
+</div>
+
+</body>
+
+</html>

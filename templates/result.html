@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FitBuddy - Your Plan</title>
+
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>💪 Your FitBuddy Plan</h1>
+
+        <p>Welcome, {{ user.name }}!</p>
+
+        <hr>
+
+        <h2>Your Details</h2>
+
+        <p><strong>Age:</strong> {{ user.age }}</p>
+
+        <p><strong>Weight:</strong> {{ user.weight }} kg</p>
+
+        <p><strong>Goal:</strong> {{ user.goal }}</p>
+
+        <p><strong>Intensity:</strong> {{ user.intensity }}</p>
+
+        <hr>
+
+        <h2>🏋️ Workout Plan</h2>
+
+        <div class="plan">
+            <pre>{{ plan.plan_text }}</pre>
+        </div>
+
+        <br>
+
+        <a href="/">
+            <button type="button">⬅ Create Another Plan</button>
+        </a>
+
+    </div>
+
+</body>
+</html>
